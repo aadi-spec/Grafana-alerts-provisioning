@@ -8,7 +8,7 @@ data:
     apiVersion: 1
     policies:
       - orgId: 1
-        receiver: email-receiver
+        receiver: Alerts
         group_by: ['alertname']
         matchers:
           - name: severity
