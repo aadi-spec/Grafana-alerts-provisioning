@@ -1,8 +1,17 @@
-contactPoints:
-  - name: ALerts
-    receivers:
-      - uid: email-receiver
-        type: email
-        settings:
-          addresses: aditya.singh@tssconsultancy.com
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-contact-points
+  namespace: prometheus-grafana
+data:
+  contact_points.yaml: |
+    apiVersion: 1
+    contactPoints:
+      - name: Alerts
+        receivers:
+          - uid: email-receiver
+            type: email
+            settings:
+              addresses: aditya.singh@tssconsultancy.com
+
 
