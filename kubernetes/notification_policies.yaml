@@ -1,9 +1,17 @@
-policies:
-  - orgId: 1
-    receiver: email-receiver
-    group_by: ['alertname']
-    matchers:
-      - name: severity
-        value: warning
-        match: true
-    continue: false
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-notification-policies
+  namespace: prometheus-grafana
+data:
+  notification_policies.yaml: |
+    apiVersion: 1
+    policies:
+      - orgId: 1
+        receiver: email-receiver
+        group_by: ['alertname']
+        matchers:
+          - name: severity
+            value: warning
+            match: true
+        continue: false
