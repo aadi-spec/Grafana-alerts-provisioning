@@ -1,1 +1,8 @@
+contactPoints:
+  - name: ALerts
+    receivers:
+      - uid: email-receiver
+        type: email
+        settings:
+          addresses: aditya.singh@tssconsultancy.com
 
