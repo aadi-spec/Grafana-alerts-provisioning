@@ -1,6 +1,6 @@
 policies:
   - orgId: 1
-    receiver: team-email
+    receiver: email-receiver
     group_by: ['alertname']
     matchers:
       - name: severity
