@@ -1,1 +1,9 @@
-
+policies:
+  - orgId: 1
+    receiver: team-email
+    group_by: ['alertname']
+    matchers:
+      - name: severity
+        value: warning
+        match: true
+    continue: false
